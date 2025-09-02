@@ -73,6 +73,7 @@ appnum_toinclude_Keka=1
 appnum_toinclude_VLC=1
 appnum_toinclude_Java8=0
 appnum_toinclude_OpenVPN=0
+appnum_toinclude_WireGuard=0
 appnum_toinclude_Firefox=1
 appnum_toinclude_Thunderbird=0
 appnum_toinclude_OBS=0

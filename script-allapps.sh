@@ -179,10 +179,10 @@ echo "175 WeChat"
 ##################################################
 echo "---------- Utilities Apps ----------"
 echo "181 TeamViewer"
-echo "182 RAR Keka"
+echo "182 Archiving - RAR Keka"
 echo "183 VLC"
 echo "184 Java 8"
-echo "185 OpenVPN"
+echo "185 VPN - OpenVPN WireGuard"
 echo "186 Firefox"
 echo "187 Thunderbird"
 echo "188 OBS"
@@ -1401,6 +1401,45 @@ then
             echo "... Done installing $1"
 
             ########## END OF CODE FOR OFFLINE INSTALL ##################################################
+        fi
+    fi
+
+    echo " "
+
+fi
+# 
+# clear param
+# unset appnum_toinclude
+# 
+# done
+
+# WireGuard
+# 
+# param
+app_num=185
+appnum_toinclude=$appnum_toinclude_WireGuard
+app_brewname="wireguard-tools"
+dir_installer="WireGuard""a64x64"
+app_name_partial="WireGuard"
+# 
+# main Install/Download/Execute
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+then
+
+    if [[ $mode_onoffdown = "1" ]]
+    then
+        # Online
+        brew install $app_brewname
+    else
+        if [[ ! -d "$dir_installer" ]]
+        then
+            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            downloadInstaller "$url" "$dir_installer"
+        fi
+        if [[ $mode_onoffdown != "3" ]]
+        then
+            # Offline
+            dmgCopyApp "$dir_installer" "$app_name_partial"
         fi
     fi
 
