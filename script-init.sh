@@ -23,7 +23,7 @@ declare -a array_ghlinks
 # 
 # 0
 array_filenames[0]="functions.sh"
-array_ghlinks[0]="https://raw.githubusercontent.com/tedzhangzg/library-script-macos/main/functions.sh"
+array_ghlinks[0]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/functions.sh"
 # 
 # 1
 array_filenames[1]="script-mainmenu.sh"
