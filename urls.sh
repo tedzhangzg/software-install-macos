@@ -52,11 +52,9 @@ url_zoom="https://zoom.us/client/latest/Zoom.pkg"
 url_teamviewerqs_13="https://download.teamviewer.com/download/version_13x/TeamViewerQS.dmg"
 
 # Java JRE JDK
-url_javajre_8_a64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_451-b10/8a1589aa0fe24566b4337beee47c2d29/unix-i586/jre-8u451-macosx-aarch64.dmg"
-url_javajre_8_x64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_451-b10/8a1589aa0fe24566b4337beee47c2d29/unix-i586/jre-8u451-macosx-x64.dmg"
+url_javajre_8_x64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_202-b08/1961070e4c9b4e26a04e7f5a083f551e/unix-i586/jre-8u202-macosx-x64.dmg"
 url_javajre_10_x64="https://javadl.oracle.com/webapps/download/GetFile/10.0.2+13/19aef61b38124481863b1413dce1855f/unix-i586/jre-10.0.2_osx-x64_bin.dmg"
-# url_javajdk_8_a64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_381-b09/8c876547113c4e4aab3c868e9e0ec572/unix-i586/jdk-8u381-macosx-aarch64.dmg"
-# url_javajdk_8_x64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_381-b09/8c876547113c4e4aab3c868e9e0ec572/unix-i586/jdk-8u381-macosx-x64.dmg"
+url_javajdk_8_x64="https://javadl.oracle.com/webapps/download/GetFile/1.8.0_202-b08/1961070e4c9b4e26a04e7f5a083f551e/unix-i586/jdk-8u202-macosx-x64.dmg"
 url_javajdk_10_x64="https://javadl.oracle.com/webapps/download/GetFile/10.0.2+13/19aef61b38124481863b1413dce1855f/unix-i586/jdk-10.0.2_osx-x64_bin.dmg"
 
 # Mozilla Firefox
