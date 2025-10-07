@@ -1662,3 +1662,31 @@ echo "Terminating script-allapps.sh ..."
 # ==================================================
 # Notes
 # ==================================================
+
+# install older versions of cask formulae
+# 
+# get link to raw rb file of specific commit from github
+# https://raw.githubusercontent.com/Homebrew/homebrew-cask/<commit-id>/Casks/m/name-of-cask-formula.rb
+# 
+# crreate new local tap
+# brew tap-new local/old-casks
+# 
+# prep dir
+# cd "$(brew --repository)/Library/Taps/local/homebrew-old-casks"
+# mkdir -p Casks
+# cd ./Casks
+# 
+# download rb file
+# curl -L -O <link-to-rb>
+# 
+# install
+# brew install --cask local/old-casks/name-of-cask-formula
+# 
+# prevent update
+# brew pin name-of-cask-formula
+# 
+# clean up tap
+# brew untap local/old-casks
+# rm -rf "$(brew --repository)/Library/Taps/local/homebrew-old-casks"
+# 
+# done
