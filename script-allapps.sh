@@ -89,7 +89,11 @@ echo "7 - Mac OS X 10.7"
 echo "6 - Mac OS X 10.6 and earlier"
 ##############################
 # ask
-while [[ ! $macos_version =~ ^[0-9]+$ ]] || [[ $macos_version -lt "6" ]] || [[ $macos_version -gt $latest_macos_version ]]
+while \
+      [[ ! $macos_version =~ ^[0-9]+$ ]] || \
+      (( $macos_version < 6 )) || \
+      (( $macos_version >= 16 && $macos_version <= 25 )) || \
+      (( $macos_version > $latest_macos_version ))
 do
     read -p "Enter number - macOS Version : " macos_version
 done

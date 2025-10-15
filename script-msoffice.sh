@@ -40,6 +40,14 @@ fi
 
 # Set according to $macos_version
 case $macos_version in
+    26)
+        # 26
+        # macOS 26
+        app_brewname="microsoft-office"
+        dir_installer="Office2024""a64x64"
+        url=$(getURLFromBrew "$app_brewname" "a64x64")
+        disable_onedrive_update=0
+        ;;
     15)
         # 15
         # macOS 15
@@ -59,10 +67,9 @@ case $macos_version in
     13)
         # 13
         # macOS 13
-        app_brewname="microsoft-office"
-        dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_brewname" "a64x64")
-        disable_onedrive_update=0
+        dir_installer="Office16v16100""a64x64"
+        url=$url_microsoft_office_16_v16100
+        disable_onedrive_update=1
         ;;
     12)
         # 12
