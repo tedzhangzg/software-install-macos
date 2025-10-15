@@ -66,6 +66,11 @@ echo "Starting installation ..."
 
 # Point to the correct VLS
 case $macos_version in
+    26)
+        # 26
+        # macOS 26
+        dir_installer="OfficeVLS/v2024"
+        ;;
     15)
         # 15
         # macOS 15
