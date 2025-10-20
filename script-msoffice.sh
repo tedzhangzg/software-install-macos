@@ -130,8 +130,8 @@ esac
 
 
 # install office
-if [[ ("13" -le $macos_version) && ($macos_version -le "15") ]]
-# macOS 13-15
+if [[ ("14" -le $macos_version) && ($macos_version -le "26") ]]
+# macOS 26,15-14
 then
     # Do case
     if [[ $mode_onoffdown = "1" ]]
@@ -150,8 +150,8 @@ then
         fi
     fi
     # Done case
-elif [[ ("6" -le $macos_version) && ($macos_version -le "12") ]]
-# macOS 11, 10.15, 10.13, 10.11, 10.10 and earlier
+elif [[ ("6" -le $macos_version) && ($macos_version -le "13") ]]
+# macOS 13-11,10.15-10.7
 then
     # Do case
     if [[ ! -d "$dir_installer" ]]
