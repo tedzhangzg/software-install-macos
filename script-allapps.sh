@@ -73,7 +73,7 @@ echo "macOS Version"
 # autodetect
 echo "Autodetect macOS Version: $(sw_vers -productVersion)"
 # list
-echo "macOS Versions"
+echo "List of macOS Versions"
 # this will first display macOS 11-latest
 # eg, 11 - macOS 11
 # and so on
@@ -112,8 +112,11 @@ echo "2 - Offline Install"
 # ask
 while [[ ! $mode_onoffdown =~ ^[0-9]+$ ]] || [[ $mode_onoffdown -lt "1" ]] || [[ $mode_onoffdown -gt "3" ]]
 do
-    read -p "Enter number - (1) Online Install , (2) Offline Install : " mode_onoffdown
+    # read -p "Enter number - (1) Online Install , (2) Offline Install : " mode_onoffdown
+    echo "Enter number - (1) Online Install , (2) Offline Install : "
+    mode_onoffdown=1
 done
+echo "CONFIRMED - mode: $mode_onoffdown"
 
 echo " "
 echo " "

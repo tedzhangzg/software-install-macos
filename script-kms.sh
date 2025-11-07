@@ -36,28 +36,15 @@ tmpdir="$HOME/Downloads/tempappinstall"
 mkdir "$tmpdir"
 
 # Check macOS Version
-# Detect
-echo "Detected macOS version: " $(sw_vers -productVersion)
-echo " "
-# List
-echo "macOS Versions"
-# this will first display macOS 11-latest
-# eg, 11 - macOS 11
-# and so on
-for (( i=$latest_macos_version ; i>=11 ; i-- ))
-do
-    echo $i" - macOS "$i
-done
-echo "10 - macOS 10.15"
-echo "9 - macOS 10.13"
-echo "8 - OS X 10.11"
-echo "7 - Mac OS X 10.7"
-echo "6 - Mac OS X 10.6 and earlier"
-# Ask
-while [[ ! $macos_version =~ ^[0-9]+$ ]] || [[ $macos_version -lt "6" ]] || [[ $macos_version -gt $latest_macos_version ]]
+while \
+      [[ ! $macos_version =~ ^[0-9]+$ ]] || \
+      (( $macos_version < 6 )) || \
+      (( $macos_version >= 16 && $macos_version <= 25 )) || \
+      (( $macos_version > $latest_macos_version ))
 do
     read -p "Enter number - macOS Version : " macos_version
 done
+echo "CONFIRMED - macos_version: $macos_version"
 
 
 # Install
