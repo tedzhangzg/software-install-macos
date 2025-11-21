@@ -24,16 +24,14 @@ source ./values.sh
 
 # var
 # var=""
+dir_extracted_vls="extracted_VLS""
+mkdir -p "$dir_extracted_vls"
 
 echo " "
 echo "================================================================================"
 echo "Installing Office VL Serializer ..."
 echo "================================================================================"
 echo " "
-
-# Create temp folder
-tmpdir="$HOME/Downloads/tempappinstall"
-mkdir "$tmpdir"
 
 # Check macOS Version
 while \
@@ -115,13 +113,10 @@ case $macos_version in
 esac
 
 # Extract
-tar -xzf "$dir_installer/$(ls $dir_installer | egrep '\.tar.gz$')" -C "$tmpdir"
+tar -xzf "$dir_installer/$(ls $dir_installer | egrep '\.tar.gz$')" -C "$dir_extracted_vls"
 
 # Install
-sudo installer -pkg "$tmpdir/$(ls $tmpdir | egrep '\.pkg$')" -target /
-
-# Remove temp folder contents
-sudo rm -rf $tmpdir/**
+sudo installer -pkg "$dir_extracted_vls/$(ls $dir_extracted_vls | egrep '\.pkg$')" -target /
 
 echo " "
 

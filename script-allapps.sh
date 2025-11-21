@@ -23,10 +23,6 @@ source ./values.sh
 # var
 # var=""
 
-# create temp folder
-tmpdir="$HOME/Downloads/tempappinstall"
-mkdir "$tmpdir"
-
 echo " "
 echo "================================================================================"
 echo "Script - Install all apps"
@@ -1649,9 +1645,6 @@ unset macos_version
 unset mode_onoffdown
 unset appnum_toinstall_from
 unset appnum_toinstall_to
-
-# rm temp folder
-sudo rm -rf $tmpdir
 
 # clear trash
 # sudo rm -rf /var/root/.Trash
