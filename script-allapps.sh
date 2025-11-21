@@ -36,9 +36,9 @@ echo "Autodetect processor architecture: $(autodetectProcessorArchitecture)"
 # list
 echo "(1) arm64"
 echo "(2) x86_64"
-echo "(3) i386"
-echo "(4) ppc64"
-echo "(5) ppc"
+# echo "(3) i386"
+# echo "(4) ppc64"
+# echo "(5) ppc"
 # ask
 while [[ ! $appInstallerArchitecture =~ ^[0-9]+$ ]] || [[ $appInstallerArchitecture -lt "1" ]] || [[ $appInstallerArchitecture -gt "2" ]]
 do

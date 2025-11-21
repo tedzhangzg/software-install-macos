@@ -24,7 +24,7 @@ source ./values.sh
 
 # var
 # var=""
-dir_extracted_vls="extracted_VLS""
+dir_extracted_vls="extracted_VLS"
 mkdir -p "$dir_extracted_vls"
 
 echo " "
