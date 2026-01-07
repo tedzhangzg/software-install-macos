@@ -1,14 +1,16 @@
 #!/bin/sh
 
-# script-blockmacupd.sh
+# script-blockmacosupdate.sh
 # ==================================================
 # Description
+# This script blocks macOS software updates by modifying the hosts file.
 # ==================================================
 # Usage
+# Run this script with administrative privileges to block macOS updates.
 # ==================================================
 
 
-echo "Starting script-blockmacupd.sh ..."
+echo "Starting script-blockmacosupdate.sh ..."
 
 # include
 # source ./functions.sh
@@ -52,7 +54,7 @@ echo " "
 
 echo " "
 
-echo "Terminating script-blockmacupd.sh ..."
+echo "Terminating script-blockmacosupdate.sh ..."
 
 
 # ==================================================

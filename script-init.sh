@@ -58,12 +58,12 @@ array_filenames[8]="script-endusersettings.sh"
 array_ghlinks[8]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-endusersettings.sh"
 # 
 # 9
-array_filenames[9]="script-blockmacupd.sh"
-array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-blockmacupd.sh"
+array_filenames[9]="script-blockmacosupdate.sh"
+array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-blockmacosupdate.sh"
 # 
 # 10
-array_filenames[9]="script-uninstall.sh"
-array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-uninstall.sh"
+array_filenames[10]="script-uninstall.sh"
+array_ghlinks[10]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-uninstall.sh"
 
 # loop over all key value pairs
 for i in "${!array_filenames[@]}"
