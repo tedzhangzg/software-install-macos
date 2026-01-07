@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# script-blockmacosupdate.sh
+# script-disablemacosupdate.sh
 # ==================================================
 # Description
 # This script blocks macOS software updates by modifying the hosts file.
@@ -10,7 +10,7 @@
 # ==================================================
 
 
-echo "Starting script-blockmacosupdate.sh ..."
+echo "Starting script-disablemacosupdate.sh ..."
 
 # include
 # source ./functions.sh
@@ -54,7 +54,7 @@ echo " "
 
 echo " "
 
-echo "Terminating script-blockmacosupdate.sh ..."
+echo "Terminating script-disablemacosupdate.sh ..."
 
 
 # ==================================================

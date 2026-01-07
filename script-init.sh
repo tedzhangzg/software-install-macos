@@ -58,8 +58,8 @@ array_filenames[8]="script-endusersettings.sh"
 array_ghlinks[8]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-endusersettings.sh"
 # 
 # 9
-array_filenames[9]="script-blockmacosupdate.sh"
-array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-blockmacosupdate.sh"
+array_filenames[9]="script-disablemacosupdate.sh"
+array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-disablemacosupdate.sh"
 # 
 # 10
 array_filenames[10]="script-uninstall.sh"

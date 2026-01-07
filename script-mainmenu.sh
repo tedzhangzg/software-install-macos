@@ -31,9 +31,8 @@ function show_menu() {
     echo "    1) All apps"
     echo "    2) Edit list of apps for Script1"
     echo " "
-    # echo "    3) Microsoft Office"
-    echo " "
     echo "    4) All config"
+    echo "    5) Disable macOS update"
     echo " "
     echo "    7) VLS"
     echo " "
@@ -65,13 +64,13 @@ do
             open -a TextEdit.app values.sh
             ;;
         3)
-            # source ./script-msoffice.sh
+            # source ./script5.sh
             ;;
         4)
             source ./script-endusersettings.sh
             ;;
         5)
-            # source ./script5.sh
+            source ./script-disablemacosupdate.sh
             ;;
         6)
             # source ./script6.sh
