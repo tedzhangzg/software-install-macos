@@ -58,6 +58,10 @@ array_filenames[8]="script-endusersettings.sh"
 array_ghlinks[8]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-endusersettings.sh"
 # 
 # 9
+array_filenames[9]="script-blockmacupd.sh"
+array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-blockmacupd.sh"
+# 
+# 10
 array_filenames[9]="script-uninstall.sh"
 array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-uninstall.sh"
 
