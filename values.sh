@@ -51,7 +51,6 @@ appnum_toinclude_dotnetlatest=1
 # 
 appnum_toinclude_Edge=1
 appnum_toinclude_Teams=1
-appnum_toinclude_Skype=0
 # 
 appnum_toinclude_Chrome=1
 appnum_toinclude_Drive=1

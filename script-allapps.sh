@@ -158,8 +158,7 @@ echo "---------- Apple Apps ----------"
 echo "---------- Microsoft Apps ----------"
 echo "121 Microsoft Edge"
 echo "122 Microsoft Teams"
-echo "123 Microsoft Skype"
-# echo "124 Microsoft Windows Essentials"
+# echo "123 Microsoft Windows Essentials"
 ##################################################
 echo "---------- Google Apps ----------"
 echo "131 Google Chrome"
@@ -645,45 +644,6 @@ then
         then
             # Offline
             pkgInstall "$dir_installer"
-        fi
-    fi
-
-    echo " "
-
-fi
-# 
-# clear param
-# unset appnum_toinclude
-# 
-# done
-
-# Microsoft Skype
-# 
-# param
-app_num=123
-appnum_toinclude=$appnum_toinclude_Skype
-app_brewname="skype"
-dir_installer="Skype""a64x64"
-app_name_partial="Skype"
-# 
-# main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
-then
-
-    if [[ $mode_onoffdown = "1" ]]
-    then
-        # Online
-        brew install --cask $app_brewname
-    else
-        if [[ ! -d "$dir_installer" ]]
-        then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
-            downloadInstaller "$url" "$dir_installer"
-        fi
-        if [[ $mode_onoffdown != "3" ]]
-        then
-            # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
         fi
     fi
 
