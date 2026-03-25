@@ -413,7 +413,6 @@ app_num=91
 appnum_toinclude=$appnum_toinclude_SublimeText
 app_hbname="sublime-text"
 dir_installer="SublimeText""a64x64"
-app_name_partial="Sublime"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -432,7 +431,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
@@ -506,7 +505,6 @@ fi
 app_num=103
 appnum_toinclude=$appnum_toinclude_VSCode
 app_hbname="visual-studio-code"
-url_appspecific="$url_vscode"
 dir_installer="VSCode""a64x64"
 # 
 # main Install/Download/Execute
@@ -520,10 +518,8 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$url_appspecific
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
-            # Rename
-            mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/VSCode-darwin-universal.zip"
         fi
         if [[ $mode_onoffdown != "3" ]]
         then
@@ -586,6 +582,7 @@ app_num=121
 appnum_toinclude=$appnum_toinclude_Edge
 app_hbname="microsoft-edge"
 dir_installer="Edge""$archSuffix"
+app_name_partial="Edge"
 # 
 # main Install/Download/Execute
 
@@ -605,7 +602,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            pkgInstall "$dir_installer"
+            dmgCopyApp "$dir_installer" "$app_name_partial"
         fi
     fi
 
@@ -751,6 +748,8 @@ then
     then
         # Online
         brew install --cask $app_hbname
+        # Rename
+        mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Messenger_ver.dmg"
     else
         if [[ ! -d "$dir_installer" ]]
         then
@@ -760,7 +759,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgInstallPkgAtRoot "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_name_partial"
         fi
     fi
 
