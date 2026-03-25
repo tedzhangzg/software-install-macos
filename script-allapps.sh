@@ -311,7 +311,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -426,7 +426,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -481,7 +481,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -560,7 +560,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -599,7 +599,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -637,7 +637,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -676,7 +676,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -715,7 +715,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -754,7 +754,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -793,7 +793,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -832,7 +832,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
             # Rename
             mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Dropbox_ver.dmg"
@@ -872,7 +872,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -910,7 +910,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -948,7 +948,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -986,7 +986,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1025,7 +1025,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1064,7 +1064,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1137,7 +1137,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1203,7 +1203,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1242,7 +1242,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1316,7 +1316,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1399,7 +1399,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1438,7 +1438,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1477,7 +1477,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1516,7 +1516,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1555,7 +1555,7 @@ then
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]

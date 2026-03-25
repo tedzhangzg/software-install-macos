@@ -40,28 +40,12 @@ fi
 
 # Set according to $macos_version
 case $macos_version in
-    26)
-        # 26
-        # macOS 26
+    26|15|14)
+        # 26|15|14
+        # macOS 26,15,14
         app_hbname="microsoft-office"
         dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_hbname" "a64x64")
-        disable_onedrive_update=0
-        ;;
-    15)
-        # 15
-        # macOS 15
-        app_hbname="microsoft-office"
-        dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_hbname" "a64x64")
-        disable_onedrive_update=0
-        ;;
-    14)
-        # 14
-        # macOS 14
-        app_hbname="microsoft-office"
-        dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_hbname" "a64x64")
+        url=$(getURLFromBrew "$app_hbname")
         disable_onedrive_update=0
         ;;
     13)
