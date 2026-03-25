@@ -297,7 +297,7 @@ fi
 # param
 app_num=11
 appnum_toinclude=$appnum_toinclude_XQuartz
-app_brewname="xquartz"
+app_hbname="xquartz"
 dir_installer="XQuartz""a64x64"
 # 
 # main Install/Download/Execute
@@ -307,11 +307,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -335,7 +335,7 @@ fi
 # param
 app_num=81
 appnum_toinclude=$appnum_toinclude_Python3
-app_brewname="python"
+app_hbname="python"
 dir_installer="Python3""a64x64"
 # 
 # main Install/Download/Execute
@@ -345,7 +345,7 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
@@ -373,7 +373,7 @@ fi
 # param
 app_num=82
 appnum_toinclude=$appnum_toinclude_Python2
-app_brewname="python@2"
+app_hbname="python@2"
 dir_installer="Python2""a64x64"
 # 
 # main Install/Download/Execute
@@ -383,7 +383,7 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
@@ -411,7 +411,7 @@ fi
 # param
 app_num=91
 appnum_toinclude=$appnum_toinclude_SublimeText
-app_brewname="sublime-text"
+app_hbname="sublime-text"
 dir_installer="SublimeText""a64x64"
 app_name_partial="Sublime"
 # 
@@ -422,11 +422,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -467,7 +467,7 @@ fi
 # param
 app_num=101
 appnum_toinclude=$appnum_toinclude_PowerShell
-app_brewname="powershell"
+app_hbname="powershell"
 dir_installer="Powershell""$archSuffix"
 # 
 # main Install/Download/Execute
@@ -477,11 +477,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -505,7 +505,7 @@ fi
 # param
 app_num=103
 appnum_toinclude=$appnum_toinclude_VSCode
-app_brewname="visual-studio-code"
+app_hbname="visual-studio-code"
 url_appspecific="$url_vscode"
 dir_installer="VSCode""a64x64"
 # 
@@ -516,7 +516,7 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
@@ -546,7 +546,7 @@ fi
 # param
 app_num=105
 appnum_toinclude=$appnum_toinclude_dotnetlatest
-app_brewname="dotnet"
+app_hbname="dotnet"
 dir_installer="dotNET""$archSuffix"
 # 
 # main Install/Download/Execute
@@ -556,11 +556,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -584,7 +584,7 @@ fi
 # param
 app_num=121
 appnum_toinclude=$appnum_toinclude_Edge
-app_brewname="microsoft-edge"
+app_hbname="microsoft-edge"
 dir_installer="Edge""$archSuffix"
 # 
 # main Install/Download/Execute
@@ -595,11 +595,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -623,7 +623,7 @@ fi
 # param
 app_num=122
 appnum_toinclude=$appnum_toinclude_Teams
-app_brewname="microsoft-teams"
+app_hbname="microsoft-teams"
 dir_installer="Teams""a64x64"
 # 
 # main Install/Download/Execute
@@ -633,11 +633,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -661,7 +661,7 @@ fi
 # param
 app_num=131
 appnum_toinclude=$appnum_toinclude_Chrome
-app_brewname="google-chrome"
+app_hbname="google-chrome"
 dir_installer="Chrome""a64x64"
 app_name_partial="Chrome"
 # 
@@ -672,11 +672,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -700,7 +700,7 @@ fi
 # param
 app_num=132
 appnum_toinclude=$appnum_toinclude_Drive
-app_brewname="google-drive"
+app_hbname="google-drive"
 dir_installer="GoogleDrive""a64x64"
 app_name_partial="Drive"
 # 
@@ -711,11 +711,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -739,7 +739,7 @@ fi
 # param
 app_num=141
 appnum_toinclude=$appnum_toinclude_Messenger
-app_brewname="messenger"
+app_hbname="messenger"
 dir_installer="Messenger""a64x64"
 app_name_partial="Messenger"
 # 
@@ -750,11 +750,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -778,7 +778,7 @@ fi
 # param
 app_num=151
 appnum_toinclude=$appnum_toinclude_AcrobatReader
-app_brewname="adobe-acrobat-reader"
+app_hbname="adobe-acrobat-reader"
 dir_installer="AcrobatReader""a64x64"
 app_name_partial="AcroRdr"
 # 
@@ -789,11 +789,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -817,7 +817,7 @@ fi
 # param
 app_num=161
 appnum_toinclude=$appnum_toinclude_Dropbox
-app_brewname="dropbox"
+app_hbname="dropbox"
 dir_installer="Dropbox""$archSuffix"
 app_name_partial="Dropbox"
 # 
@@ -828,11 +828,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
             # Rename
             mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Dropbox_ver.dmg"
@@ -858,7 +858,7 @@ fi
 # param
 app_num=171
 appnum_toinclude=$appnum_toinclude_Zoom
-app_brewname="zoom"
+app_hbname="zoom"
 dir_installer="Zoom""$archSuffix"
 # 
 # main Install/Download/Execute
@@ -868,11 +868,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -896,7 +896,7 @@ fi
 # param
 app_num=172
 appnum_toinclude=$appnum_toinclude_Discord
-app_brewname="discord"
+app_hbname="discord"
 dir_installer="Discord""a64x64"
 # 
 # main Install/Download/Execute
@@ -906,11 +906,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -934,7 +934,7 @@ fi
 # param
 app_num=173
 appnum_toinclude=$appnum_toinclude_Telegram
-app_brewname="telegram"
+app_hbname="telegram"
 dir_installer="Telegram""a64x64"
 # 
 # main Install/Download/Execute
@@ -944,11 +944,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -972,7 +972,7 @@ fi
 # param
 app_num=174
 appnum_toinclude=$appnum_toinclude_WhatsApp
-app_brewname="whatsapp"
+app_hbname="whatsapp"
 dir_installer="WhatsApp""a64x64"
 # 
 # main Install/Download/Execute
@@ -982,11 +982,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1010,7 +1010,7 @@ fi
 # param
 app_num=175
 appnum_toinclude=$appnum_toinclude_WeChat
-app_brewname="wechat"
+app_hbname="wechat"
 dir_installer="WeChat""a64x64"
 app_name_partial="WeChat"
 # 
@@ -1021,11 +1021,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1049,7 +1049,7 @@ fi
 # param
 app_num=181
 appnum_toinclude=$appnum_toinclude_TeamViewer
-app_brewname="teamviewer"
+app_hbname="teamviewer"
 dir_installer="TeamViewerLatest""a64x64"
 app_name_partial="TeamViewer"
 # 
@@ -1060,11 +1060,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1088,7 +1088,7 @@ fi
 # param
 app_num=181
 appnum_toinclude=$appnum_toinclude_TeamViewer
-app_brewname="teamviewer"
+app_hbname="teamviewer"
 url_appspecific="$url_teamviewerqs_13"
 dir_installer="TeamViewerQS13""x64"
 app_name_partial="TeamViewerQS"
@@ -1123,7 +1123,7 @@ fi
 # param
 app_num=182
 appnum_toinclude=$appnum_toinclude_Keka
-app_brewname="rar"
+app_hbname="rar"
 dir_installer="RAR""$archSuffix"
 # 
 # main Install/Download/Execute
@@ -1133,11 +1133,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1188,7 +1188,7 @@ fi
 # param
 app_num=182
 appnum_toinclude=$appnum_toinclude_Keka
-app_brewname="keka"
+app_hbname="keka"
 dir_installer="Keka""a64x64"
 app_name_partial="Keka"
 # 
@@ -1199,11 +1199,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1227,7 +1227,7 @@ fi
 # param
 app_num=183
 appnum_toinclude=$appnum_toinclude_VLC
-app_brewname="vlc"
+app_hbname="vlc"
 dir_installer="VLC""$archSuffix"
 app_name_partial="VLC"
 # 
@@ -1238,11 +1238,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1266,7 +1266,7 @@ fi
 # param
 app_num=184
 appnum_toinclude=$appnum_toinclude_Java8
-app_brewname="java"
+app_hbname="java"
 url_appspecific="$url_javajre_8_x64"
 dir_installer="Java""x64"
 app_name_partial="Java"
@@ -1301,7 +1301,7 @@ fi
 # param
 app_num=185
 appnum_toinclude=$appnum_toinclude_OpenVPN
-app_brewname="openvpn-connect"
+app_hbname="openvpn-connect"
 dir_installer="OpenVPN""a64x64"
 app_name_partial="OpenVPN"
 # 
@@ -1312,11 +1312,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1384,7 +1384,7 @@ fi
 # param
 app_num=185
 appnum_toinclude=$appnum_toinclude_WireGuard
-app_brewname="wireguard-tools"
+app_hbname="wireguard-tools"
 dir_installer="WireGuard""a64x64"
 app_name_partial="WireGuard"
 # 
@@ -1395,11 +1395,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install $app_brewname
+        brew install $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1423,7 +1423,7 @@ fi
 # param
 app_num=186
 appnum_toinclude=$appnum_toinclude_Firefox
-app_brewname="firefox"
+app_hbname="firefox"
 dir_installer="Firefox""a64x64"
 app_name_partial="Firefox"
 # 
@@ -1434,11 +1434,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1462,7 +1462,7 @@ fi
 # param
 app_num=187
 appnum_toinclude=$appnum_toinclude_Thunderbird
-app_brewname="thunderbird"
+app_hbname="thunderbird"
 dir_installer="Thunderbird""a64x64"
 app_name_partial="Thunderbird"
 # 
@@ -1473,11 +1473,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "a64x64")
+            url=$(getURLFromBrew "$app_hbname" "a64x64")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1501,7 +1501,7 @@ fi
 # param
 app_num=188
 appnum_toinclude=$appnum_toinclude_OBS
-app_brewname="obs"
+app_hbname="obs"
 dir_installer="OBS""$archSuffix"
 app_name_partial="OBS"
 # 
@@ -1512,11 +1512,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1540,7 +1540,7 @@ fi
 # param
 app_num=190
 appnum_toinclude=$appnum_toinclude_LibreOffice
-app_brewname="libreoffice"
+app_hbname="libreoffice"
 dir_installer="LibreOffice""$archSuffix"
 app_name_partial="LibreOffice"
 # 
@@ -1551,11 +1551,11 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
-            url=$(getURLFromBrew "$app_brewname" "$archSuffix")
+            url=$(getURLFromBrew "$app_hbname" "$archSuffix")
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
@@ -1579,7 +1579,7 @@ fi
 # param
 app_num=200
 appnum_toinclude=$appnum_toinclude_Office
-app_brewname="microsoft-office"
+app_hbname="microsoft-office"
 dir_installer="Office"
 # 
 # main Install/Download/Execute

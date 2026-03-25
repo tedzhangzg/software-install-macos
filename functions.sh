@@ -91,7 +91,7 @@ function meetMinOS() {
 # Get URL from brew JSON file
 # 
 # Usage
-# getURLFromBrew "$app_brewname" "$archSuffix"
+# getURLFromBrew "$app_hbname" "$archSuffix"
 # 
 function getURLFromBrew() {
 

@@ -43,25 +43,25 @@ case $macos_version in
     26)
         # 26
         # macOS 26
-        app_brewname="microsoft-office"
+        app_hbname="microsoft-office"
         dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_brewname" "a64x64")
+        url=$(getURLFromBrew "$app_hbname" "a64x64")
         disable_onedrive_update=0
         ;;
     15)
         # 15
         # macOS 15
-        app_brewname="microsoft-office"
+        app_hbname="microsoft-office"
         dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_brewname" "a64x64")
+        url=$(getURLFromBrew "$app_hbname" "a64x64")
         disable_onedrive_update=0
         ;;
     14)
         # 14
         # macOS 14
-        app_brewname="microsoft-office"
+        app_hbname="microsoft-office"
         dir_installer="Office2024""a64x64"
-        url=$(getURLFromBrew "$app_brewname" "a64x64")
+        url=$(getURLFromBrew "$app_hbname" "a64x64")
         disable_onedrive_update=0
         ;;
     13)
@@ -137,7 +137,7 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # Online
-        brew install --cask $app_brewname
+        brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
         then
