@@ -91,27 +91,12 @@ function meetMinOS() {
 # Get URL from brew JSON file
 # 
 # Usage
-# getURLFromBrew "$app_hbname" "$archSuffix"
+# getURLFromBrew "$app_hbname"
 # 
 function getURLFromBrew() {
 
-    # URL of brew cask
-    url_json_file="https://formulae.brew.sh/api/cask/$1.json"
-
-    # Determine mode and corresponding URL
-    if [[ "$2" = "a64x64" ]] || [[ "$2" = "x64" ]]
-    then
-        url_brew_package=$(curl -s $url_json_file | python3 -c "import sys, json; print(json.load(sys.stdin)['url'])")
-    elif [[ "$2" = "a64" ]]
-    then
-        url_brew_package=$(curl -s $url_json_file | python3 -c "import sys, json; print(json.load(sys.stdin)['variations']['arm64_ventura']['url'])")
-    else
-        # default to
-        url_brew_package=$(curl -s $url_json_file | python3 -c "import sys, json; print(json.load(sys.stdin)['url'])")
-    fi
-
-    # Print
-    echo $url_brew_package
+    # print
+    echo $(brew info --cask --json=v2 $app_hbname | jq -r '.casks[].url')
 
 }
 
