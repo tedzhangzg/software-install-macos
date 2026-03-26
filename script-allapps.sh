@@ -1354,7 +1354,7 @@ fi
 # param
 app_num=184
 app_shortname="Java"
-app_toinclude=$app_toinclude_Java8
+app_toinclude=$app_toinclude_Java
 # 
 # main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]

@@ -34,7 +34,7 @@
 ##################################################
 app_toinclude_Rosetta2=1
 app_toinclude_Homebrew=1
-app_toinclude_enableDevMode=1
+app_toinclude_enableDevMode=0
 # 
 app_toinclude_XQuartz=1
 # 
@@ -70,7 +70,7 @@ app_toinclude_WeChat=0
 app_toinclude_TeamViewer=1
 app_toinclude_Keka=1
 app_toinclude_VLC=1
-app_toinclude_Java8=0
+app_toinclude_Java=0
 app_toinclude_OpenVPN=0
 app_toinclude_WireGuard=0
 app_toinclude_Firefox=1
