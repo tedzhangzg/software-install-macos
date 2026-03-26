@@ -49,11 +49,11 @@ done
 case $appInstallerArchitecture in
     1)
         # 1
-        archSuffix="a64"
+        arch_name="a64"
         ;;
     2)
         # 2
-        archSuffix="x64"
+        arch_name="x64"
         ;;
     *)
         # Default
@@ -226,7 +226,7 @@ echo " "
 app_num=1
 app_toinclude=$app_toinclude_Rosetta2
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     if [[ $appInstallerArchitecture -eq "1" ]]
@@ -247,7 +247,7 @@ fi
 app_num=2
 app_toinclude=$app_toinclude_Homebrew
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     source ./script-homebrew.sh
@@ -280,7 +280,7 @@ fi
 app_num=3
 app_toinclude=$app_toinclude_enableDevMode
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     sudo DevToolsSecurity -enable
@@ -296,37 +296,41 @@ fi
 # 
 # param
 app_num=11
+app_shortname="XQuartz"
 app_toinclude=$app_toinclude_XQuartz
-app_hbname="xquartz"
-dir_installer="XQuartz""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="xquartz"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -334,37 +338,41 @@ fi
 # 
 # param
 app_num=81
+app_shortname="Python3"
 app_toinclude=$app_toinclude_Python3
-app_hbname="python"
-dir_installer="Python3""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
+    # param
+    app_hbname="python"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$url_python3
             downloadInstaller "$url" "$dir_installer"
         fi
         if [[ $mode_onoffdown != "3" ]]
+        # install
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -372,37 +380,41 @@ fi
 # 
 # param
 app_num=82
+app_shortname="Python2"
 app_toinclude=$app_toinclude_Python2
-app_hbname="python@2"
-dir_installer="Python2""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
+    # param
+    app_hbname="python@2"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$url_python3
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -410,37 +422,41 @@ fi
 # 
 # param
 app_num=91
+app_shortname="SublimeText"
 app_toinclude=$app_toinclude_SublimeText
-app_hbname="sublime-text"
-dir_installer="SublimeText""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="sublime-text"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -448,16 +464,22 @@ fi
 # 
 # param
 app_num=100
+app_shortname="RestartMidway"
 app_toinclude=$app_toinclude_RestartMidway
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
+
+    # restart
     sudo reboot
+
+    # done
+    echo " "
+    # clear param
+    # unset app_toinclude
+
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -465,37 +487,41 @@ fi
 # 
 # param
 app_num=101
+app_shortname="PowerShell"
 app_toinclude=$app_toinclude_PowerShell
-app_hbname="powershell"
-dir_installer="Powershell""$archSuffix"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
+    # param
+    app_hbname="powershell"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -503,37 +529,41 @@ fi
 # 
 # param
 app_num=103
+app_shortname="VSCode"
 app_toinclude=$app_toinclude_VSCode
-app_hbname="visual-studio-code"
-dir_installer="VSCode""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="visual-studio-code"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -541,37 +571,41 @@ fi
 # 
 # param
 app_num=105
-app_toinclude=$app_toinclude_dotnetlatest
-app_hbname="dotnet"
-dir_installer="dotNET""$archSuffix"
+app_shortname="dotNETlatest"
+app_toinclude=$app_toinclude_dotNETlatest
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="dotnet"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -579,39 +613,42 @@ fi
 # 
 # param
 app_num=121
-app_toinclude=$app_toinclude_Edge
-app_hbname="microsoft-edge"
-dir_installer="Edge""$archSuffix"
 app_shortname="Edge"
+app_toinclude=$app_toinclude_Edge
 # 
-# main Install/Download/Execute
+# main
 
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="microsoft-edge"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -619,37 +656,41 @@ fi
 # 
 # param
 app_num=122
+app_shortname="Teams"
 app_toinclude=$app_toinclude_Teams
-app_hbname="microsoft-teams"
-dir_installer="Teams""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="microsoft-teams"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -657,38 +698,41 @@ fi
 # 
 # param
 app_num=131
-app_toinclude=$app_toinclude_Chrome
-app_hbname="google-chrome"
-dir_installer="Chrome""a64x64"
 app_shortname="Chrome"
+app_toinclude=$app_toinclude_Chrome
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="google-chrome"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -696,38 +740,41 @@ fi
 # 
 # param
 app_num=132
-app_toinclude=$app_toinclude_Drive
-app_hbname="google-drive"
-dir_installer="GoogleDrive""a64x64"
 app_shortname="Drive"
+app_toinclude=$app_toinclude_Drive
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="google-drive"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -735,40 +782,43 @@ fi
 # 
 # param
 app_num=141
-app_toinclude=$app_toinclude_Messenger
-app_hbname="messenger"
-dir_installer="Messenger""a64x64"
 app_shortname="Messenger"
+app_toinclude=$app_toinclude_Messenger
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="messenger"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
         # Rename
         mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Messenger_ver.dmg"
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -776,38 +826,41 @@ fi
 # 
 # param
 app_num=151
+app_shortname="AcrobatReader"
 app_toinclude=$app_toinclude_AcrobatReader
-app_hbname="adobe-acrobat-reader"
-dir_installer="AcrobatReader""a64x64"
-app_shortname="AcroRdr"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="adobe-acrobat-reader"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -815,20 +868,23 @@ fi
 # 
 # param
 app_num=161
-app_toinclude=$app_toinclude_Dropbox
-app_hbname="dropbox"
-dir_installer="Dropbox""$archSuffix"
 app_shortname="Dropbox"
+app_toinclude=$app_toinclude_Dropbox
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="dropbox"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
@@ -836,19 +892,19 @@ then
             # Rename
             mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Dropbox_ver.dmg"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgInstallApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -856,37 +912,41 @@ fi
 # 
 # param
 app_num=171
+app_shortname="Zoom"
 app_toinclude=$app_toinclude_Zoom
-app_hbname="zoom"
-dir_installer="Zoom""$archSuffix"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="zoom"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             pkgInstall "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -894,37 +954,41 @@ fi
 # 
 # param
 app_num=172
+app_shortname="Discord"
 app_toinclude=$app_toinclude_Discord
-app_hbname="discord"
-dir_installer="Discord""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="discord"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -932,37 +996,41 @@ fi
 # 
 # param
 app_num=173
+app_shortname="Telegram"
 app_toinclude=$app_toinclude_Telegram
-app_hbname="telegram"
-dir_installer="Telegram""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="telegram"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -970,37 +1038,41 @@ fi
 # 
 # param
 app_num=174
+app_shortname="WhatsApp"
 app_toinclude=$app_toinclude_WhatsApp
-app_hbname="whatsapp"
-dir_installer="WhatsApp""a64x64"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="whatsapp"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             uncompressFileCopyApp "$dir_installer"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1008,38 +1080,41 @@ fi
 # 
 # param
 app_num=175
-app_toinclude=$app_toinclude_WeChat
-app_hbname="wechat"
-dir_installer="WeChat""a64x64"
 app_shortname="WeChat"
+app_toinclude=$app_toinclude_WeChat
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="wechat"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1047,38 +1122,41 @@ fi
 # 
 # param
 app_num=181
-app_toinclude=$app_toinclude_TeamViewer
-app_hbname="teamviewer"
-dir_installer="TeamViewerLatest""a64x64"
 app_shortname="TeamViewer"
+app_toinclude=$app_toinclude_TeamViewer
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="teamviewer"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1086,34 +1164,36 @@ fi
 # 
 # param
 app_num=181
-app_toinclude=$app_toinclude_TeamViewer
-app_hbname="teamviewer"
-url_appspecific="$url_teamviewerqs_13"
-dir_installer="TeamViewerQS13""x64"
 app_shortname="TeamViewerQS"
+app_toinclude=$app_toinclude_TeamViewer
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
-    # Download
+    # param
+    app_hbname="teamviewer"
+    url_appspecific="$url_teamviewerqs_13"
+    dir_installer="$app_shortname""_""x64"
+
+    # download
     if [[ ! -d "$dir_installer" ]]
     then
         url=$url_appspecific
         downloadInstaller "$url" "$dir_installer"
     fi
+    # install
     if [[ $mode_onoffdown != "3" ]]
     then
-        # Offline
         dmgCopyApp "$dir_installer" "$app_shortname"
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1121,17 +1201,20 @@ fi
 # 
 # param
 app_num=182
-app_toinclude=$app_toinclude_Keka
-app_hbname="rar"
-dir_installer="RAR""$archSuffix"
+app_shortname="RAR"
+app_toinclude=$app_toinclude_RAR
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="rar"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
@@ -1141,7 +1224,7 @@ then
         fi
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
+            # install
             ########## START OF CODE FOR OFFLINE INSTALL ##################################################
             # Almost same as uncompressFileCopyApp "$dir_installer"
 
@@ -1173,12 +1256,12 @@ then
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1186,38 +1269,41 @@ fi
 # 
 # param
 app_num=182
-app_toinclude=$app_toinclude_Keka
-app_hbname="keka"
-dir_installer="Keka""a64x64"
 app_shortname="Keka"
+app_toinclude=$app_toinclude_Keka
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="keka"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1225,38 +1311,41 @@ fi
 # 
 # param
 app_num=183
-app_toinclude=$app_toinclude_VLC
-app_hbname="vlc"
-dir_installer="VLC""$archSuffix"
 app_shortname="VLC"
+app_toinclude=$app_toinclude_VLC
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="vlc"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1264,34 +1353,36 @@ fi
 # 
 # param
 app_num=184
-app_toinclude=$app_toinclude_Java8
-app_hbname="java"
-url_appspecific="$url_javajre_8_x64"
-dir_installer="Java""x64"
 app_shortname="Java"
+app_toinclude=$app_toinclude_Java8
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
-    # Download
+    # param
+    app_hbname="java"
+    url_appspecific="$url_javajre_8_x64"
+    dir_installer="$app_shortname""_""$arch_name"
+
+    # download
     if [[ ! -d "$dir_installer" ]]
     then
         url=$url_appspecific
         downloadInstaller "$url" "$dir_installer"
     fi
+    # install
     if [[ $mode_onoffdown != "3" ]]
     then
-        # Offline
         dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1299,18 +1390,20 @@ fi
 # 
 # param
 app_num=185
-app_toinclude=$app_toinclude_OpenVPN
-app_hbname="openvpn-connect"
-dir_installer="OpenVPN""a64x64"
 app_shortname="OpenVPN"
+app_toinclude=$app_toinclude_OpenVPN
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="openvpn-connect"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
         if [[ ! -d "$dir_installer" ]]
@@ -1320,7 +1413,7 @@ then
         fi
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
+            # install
             ########## START OF CODE FOR OFFLINE INSTALL ##################################################
             # Almost same as dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
 
@@ -1369,12 +1462,12 @@ then
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1382,38 +1475,41 @@ fi
 # 
 # param
 app_num=185
-app_toinclude=$app_toinclude_WireGuard
-app_hbname="wireguard-tools"
-dir_installer="WireGuard""a64x64"
 app_shortname="WireGuard"
+app_toinclude=$app_toinclude_WireGuard
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="wireguard-tools"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1421,38 +1517,41 @@ fi
 # 
 # param
 app_num=186
-app_toinclude=$app_toinclude_Firefox
-app_hbname="firefox"
-dir_installer="Firefox""a64x64"
 app_shortname="Firefox"
+app_toinclude=$app_toinclude_Firefox
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="firefox"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1460,38 +1559,41 @@ fi
 # 
 # param
 app_num=187
-app_toinclude=$app_toinclude_Thunderbird
-app_hbname="thunderbird"
-dir_installer="Thunderbird""a64x64"
 app_shortname="Thunderbird"
+app_toinclude=$app_toinclude_Thunderbird
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="thunderbird"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1499,38 +1601,41 @@ fi
 # 
 # param
 app_num=188
-app_toinclude=$app_toinclude_OBS
-app_hbname="obs"
-dir_installer="OBS""$archSuffix"
 app_shortname="OBS"
+app_toinclude=$app_toinclude_OBS
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="obs"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1538,38 +1643,41 @@ fi
 # 
 # param
 app_num=190
-app_toinclude=$app_toinclude_LibreOffice
-app_hbname="libreoffice"
-dir_installer="LibreOffice""$archSuffix"
 app_shortname="LibreOffice"
+app_toinclude=$app_toinclude_LibreOffice
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
+    # param
+    app_hbname="libreoffice"
+    dir_installer="$app_shortname""_""$arch_name"
+
     if [[ $mode_onoffdown = "1" ]]
     then
-        # Online
+        # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # Offline
             dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
 
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1577,19 +1685,26 @@ fi
 # 
 # param
 app_num=200
+app_shortname="Office"
 app_toinclude=$app_toinclude_Office
-app_hbname="microsoft-office"
-dir_installer="Office"
 # 
-# main Install/Download/Execute
+# main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
+
+    # param
+    app_hbname="microsoft-office"
+    dir_installer="$app_shortname""_""$arch_name"
+
+    # run
     source ./script-msoffice.sh
+
+    # done
     echo " "
+    # clear param
+    # unset app_toinclude
+
 fi
-# 
-# clear param
-# unset app_toinclude
 # 
 # done
 
@@ -1599,7 +1714,7 @@ echo " "
 
 # unset variables
 unset appInstallerArchitecture
-unset archSuffix
+unset arch_name
 unset macos_version
 unset mode_onoffdown
 unset appnum_toinstall_from

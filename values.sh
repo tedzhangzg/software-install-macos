@@ -47,7 +47,7 @@ app_toinclude_RestartMidway=0
 ##################################################
 app_toinclude_PowerShell=1
 app_toinclude_VSCode=1
-app_toinclude_dotnetlatest=1
+app_toinclude_dotNETlatest=1
 # 
 app_toinclude_Edge=1
 app_toinclude_Teams=1
