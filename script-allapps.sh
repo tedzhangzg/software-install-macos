@@ -224,10 +224,10 @@ echo " "
 # 
 # param
 app_num=1
-appnum_toinclude=$appnum_toinclude_Rosetta2
+app_toinclude=$app_toinclude_Rosetta2
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     if [[ $appInstallerArchitecture -eq "1" ]]
     then
@@ -237,7 +237,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -245,10 +245,10 @@ fi
 # 
 # param
 app_num=2
-appnum_toinclude=$appnum_toinclude_Homebrew
+app_toinclude=$app_toinclude_Homebrew
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     source ./script-homebrew.sh
     # brew tap homebrew/core
@@ -270,7 +270,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -278,17 +278,17 @@ fi
 # 
 # param
 app_num=3
-appnum_toinclude=$appnum_toinclude_enableDevMode
+app_toinclude=$app_toinclude_enableDevMode
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     sudo DevToolsSecurity -enable
     echo " "
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -296,12 +296,12 @@ fi
 # 
 # param
 app_num=11
-appnum_toinclude=$appnum_toinclude_XQuartz
+app_toinclude=$app_toinclude_XQuartz
 app_hbname="xquartz"
 dir_installer="XQuartz""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -326,7 +326,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -334,12 +334,12 @@ fi
 # 
 # param
 app_num=81
-appnum_toinclude=$appnum_toinclude_Python3
+app_toinclude=$app_toinclude_Python3
 app_hbname="python"
 dir_installer="Python3""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") && ($macos_version -ge "11") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -364,7 +364,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -372,12 +372,12 @@ fi
 # 
 # param
 app_num=82
-appnum_toinclude=$appnum_toinclude_Python2
+app_toinclude=$app_toinclude_Python2
 app_hbname="python@2"
 dir_installer="Python2""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") && ($macos_version -ge "11") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -402,7 +402,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -410,12 +410,12 @@ fi
 # 
 # param
 app_num=91
-appnum_toinclude=$appnum_toinclude_SublimeText
+app_toinclude=$app_toinclude_SublimeText
 app_hbname="sublime-text"
 dir_installer="SublimeText""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -440,7 +440,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -448,16 +448,16 @@ fi
 # 
 # param
 app_num=100
-appnum_toinclude=$appnum_toinclude_RestartMidway
+app_toinclude=$app_toinclude_RestartMidway
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     sudo reboot
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -465,12 +465,12 @@ fi
 # 
 # param
 app_num=101
-appnum_toinclude=$appnum_toinclude_PowerShell
+app_toinclude=$app_toinclude_PowerShell
 app_hbname="powershell"
 dir_installer="Powershell""$archSuffix"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") && ($macos_version -ge "11") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") && ($macos_version -ge "11") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -495,7 +495,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -503,12 +503,12 @@ fi
 # 
 # param
 app_num=103
-appnum_toinclude=$appnum_toinclude_VSCode
+app_toinclude=$app_toinclude_VSCode
 app_hbname="visual-studio-code"
 dir_installer="VSCode""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -533,7 +533,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -541,12 +541,12 @@ fi
 # 
 # param
 app_num=105
-appnum_toinclude=$appnum_toinclude_dotnetlatest
+app_toinclude=$app_toinclude_dotnetlatest
 app_hbname="dotnet"
 dir_installer="dotNET""$archSuffix"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -571,7 +571,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -579,14 +579,14 @@ fi
 # 
 # param
 app_num=121
-appnum_toinclude=$appnum_toinclude_Edge
+app_toinclude=$app_toinclude_Edge
 app_hbname="microsoft-edge"
 dir_installer="Edge""$archSuffix"
 app_shortname="Edge"
 # 
 # main Install/Download/Execute
 
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -611,7 +611,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -619,12 +619,12 @@ fi
 # 
 # param
 app_num=122
-appnum_toinclude=$appnum_toinclude_Teams
+app_toinclude=$app_toinclude_Teams
 app_hbname="microsoft-teams"
 dir_installer="Teams""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -649,7 +649,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -657,13 +657,13 @@ fi
 # 
 # param
 app_num=131
-appnum_toinclude=$appnum_toinclude_Chrome
+app_toinclude=$app_toinclude_Chrome
 app_hbname="google-chrome"
 dir_installer="Chrome""a64x64"
 app_shortname="Chrome"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -688,7 +688,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -696,13 +696,13 @@ fi
 # 
 # param
 app_num=132
-appnum_toinclude=$appnum_toinclude_Drive
+app_toinclude=$app_toinclude_Drive
 app_hbname="google-drive"
 dir_installer="GoogleDrive""a64x64"
 app_shortname="Drive"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -727,7 +727,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -735,13 +735,13 @@ fi
 # 
 # param
 app_num=141
-appnum_toinclude=$appnum_toinclude_Messenger
+app_toinclude=$app_toinclude_Messenger
 app_hbname="messenger"
 dir_installer="Messenger""a64x64"
 app_shortname="Messenger"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -768,7 +768,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -776,13 +776,13 @@ fi
 # 
 # param
 app_num=151
-appnum_toinclude=$appnum_toinclude_AcrobatReader
+app_toinclude=$app_toinclude_AcrobatReader
 app_hbname="adobe-acrobat-reader"
 dir_installer="AcrobatReader""a64x64"
 app_shortname="AcroRdr"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -807,7 +807,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -815,13 +815,13 @@ fi
 # 
 # param
 app_num=161
-appnum_toinclude=$appnum_toinclude_Dropbox
+app_toinclude=$app_toinclude_Dropbox
 app_hbname="dropbox"
 dir_installer="Dropbox""$archSuffix"
 app_shortname="Dropbox"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -848,7 +848,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -856,12 +856,12 @@ fi
 # 
 # param
 app_num=171
-appnum_toinclude=$appnum_toinclude_Zoom
+app_toinclude=$app_toinclude_Zoom
 app_hbname="zoom"
 dir_installer="Zoom""$archSuffix"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -886,7 +886,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -894,12 +894,12 @@ fi
 # 
 # param
 app_num=172
-appnum_toinclude=$appnum_toinclude_Discord
+app_toinclude=$app_toinclude_Discord
 app_hbname="discord"
 dir_installer="Discord""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -924,7 +924,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -932,12 +932,12 @@ fi
 # 
 # param
 app_num=173
-appnum_toinclude=$appnum_toinclude_Telegram
+app_toinclude=$app_toinclude_Telegram
 app_hbname="telegram"
 dir_installer="Telegram""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -962,7 +962,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -970,12 +970,12 @@ fi
 # 
 # param
 app_num=174
-appnum_toinclude=$appnum_toinclude_WhatsApp
+app_toinclude=$app_toinclude_WhatsApp
 app_hbname="whatsapp"
 dir_installer="WhatsApp""a64x64"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1000,7 +1000,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1008,13 +1008,13 @@ fi
 # 
 # param
 app_num=175
-appnum_toinclude=$appnum_toinclude_WeChat
+app_toinclude=$app_toinclude_WeChat
 app_hbname="wechat"
 dir_installer="WeChat""a64x64"
 app_shortname="WeChat"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1039,7 +1039,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1047,13 +1047,13 @@ fi
 # 
 # param
 app_num=181
-appnum_toinclude=$appnum_toinclude_TeamViewer
+app_toinclude=$app_toinclude_TeamViewer
 app_hbname="teamviewer"
 dir_installer="TeamViewerLatest""a64x64"
 app_shortname="TeamViewer"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1078,7 +1078,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1086,14 +1086,14 @@ fi
 # 
 # param
 app_num=181
-appnum_toinclude=$appnum_toinclude_TeamViewer
+app_toinclude=$app_toinclude_TeamViewer
 app_hbname="teamviewer"
 url_appspecific="$url_teamviewerqs_13"
 dir_installer="TeamViewerQS13""x64"
 app_shortname="TeamViewerQS"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     # Download
@@ -1113,7 +1113,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1121,12 +1121,12 @@ fi
 # 
 # param
 app_num=182
-appnum_toinclude=$appnum_toinclude_Keka
+app_toinclude=$app_toinclude_Keka
 app_hbname="rar"
 dir_installer="RAR""$archSuffix"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1178,7 +1178,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1186,13 +1186,13 @@ fi
 # 
 # param
 app_num=182
-appnum_toinclude=$appnum_toinclude_Keka
+app_toinclude=$app_toinclude_Keka
 app_hbname="keka"
 dir_installer="Keka""a64x64"
 app_shortname="Keka"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1217,7 +1217,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1225,13 +1225,13 @@ fi
 # 
 # param
 app_num=183
-appnum_toinclude=$appnum_toinclude_VLC
+app_toinclude=$app_toinclude_VLC
 app_hbname="vlc"
 dir_installer="VLC""$archSuffix"
 app_shortname="VLC"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1256,7 +1256,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1264,14 +1264,14 @@ fi
 # 
 # param
 app_num=184
-appnum_toinclude=$appnum_toinclude_Java8
+app_toinclude=$app_toinclude_Java8
 app_hbname="java"
 url_appspecific="$url_javajre_8_x64"
 dir_installer="Java""x64"
 app_shortname="Java"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     # Download
@@ -1291,7 +1291,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1299,13 +1299,13 @@ fi
 # 
 # param
 app_num=185
-appnum_toinclude=$appnum_toinclude_OpenVPN
+app_toinclude=$app_toinclude_OpenVPN
 app_hbname="openvpn-connect"
 dir_installer="OpenVPN""a64x64"
 app_shortname="OpenVPN"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1374,7 +1374,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1382,13 +1382,13 @@ fi
 # 
 # param
 app_num=185
-appnum_toinclude=$appnum_toinclude_WireGuard
+app_toinclude=$app_toinclude_WireGuard
 app_hbname="wireguard-tools"
 dir_installer="WireGuard""a64x64"
 app_shortname="WireGuard"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1413,7 +1413,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1421,13 +1421,13 @@ fi
 # 
 # param
 app_num=186
-appnum_toinclude=$appnum_toinclude_Firefox
+app_toinclude=$app_toinclude_Firefox
 app_hbname="firefox"
 dir_installer="Firefox""a64x64"
 app_shortname="Firefox"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1452,7 +1452,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1460,13 +1460,13 @@ fi
 # 
 # param
 app_num=187
-appnum_toinclude=$appnum_toinclude_Thunderbird
+app_toinclude=$app_toinclude_Thunderbird
 app_hbname="thunderbird"
 dir_installer="Thunderbird""a64x64"
 app_shortname="Thunderbird"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1491,7 +1491,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1499,13 +1499,13 @@ fi
 # 
 # param
 app_num=188
-appnum_toinclude=$appnum_toinclude_OBS
+app_toinclude=$app_toinclude_OBS
 app_hbname="obs"
 dir_installer="OBS""$archSuffix"
 app_shortname="OBS"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1530,7 +1530,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1538,13 +1538,13 @@ fi
 # 
 # param
 app_num=190
-appnum_toinclude=$appnum_toinclude_LibreOffice
+app_toinclude=$app_toinclude_LibreOffice
 app_hbname="libreoffice"
 dir_installer="LibreOffice""$archSuffix"
 app_shortname="LibreOffice"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     if [[ $mode_onoffdown = "1" ]]
@@ -1569,7 +1569,7 @@ then
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 
@@ -1577,19 +1577,19 @@ fi
 # 
 # param
 app_num=200
-appnum_toinclude=$appnum_toinclude_Office
+app_toinclude=$app_toinclude_Office
 app_hbname="microsoft-office"
 dir_installer="Office"
 # 
 # main Install/Download/Execute
-if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
+if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
     source ./script-msoffice.sh
     echo " "
 fi
 # 
 # clear param
-# unset appnum_toinclude
+# unset app_toinclude
 # 
 # done
 

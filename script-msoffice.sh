@@ -33,7 +33,7 @@ echo "==========================================================================
 echo " "
 
 # install vls
-if [[ ($appnum_toinclude_OfficeVLS -eq "1") ]]
+if [[ ($app_toinclude_OfficeVLS -eq "1") ]]
 then
     source ./script-kms.sh
 fi
