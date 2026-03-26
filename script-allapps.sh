@@ -582,7 +582,7 @@ app_num=121
 appnum_toinclude=$appnum_toinclude_Edge
 app_hbname="microsoft-edge"
 dir_installer="Edge""$archSuffix"
-app_name_partial="Edge"
+app_shortname="Edge"
 # 
 # main Install/Download/Execute
 
@@ -602,7 +602,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -660,7 +660,7 @@ app_num=131
 appnum_toinclude=$appnum_toinclude_Chrome
 app_hbname="google-chrome"
 dir_installer="Chrome""a64x64"
-app_name_partial="Chrome"
+app_shortname="Chrome"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -679,7 +679,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -699,7 +699,7 @@ app_num=132
 appnum_toinclude=$appnum_toinclude_Drive
 app_hbname="google-drive"
 dir_installer="GoogleDrive""a64x64"
-app_name_partial="Drive"
+app_shortname="Drive"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -718,7 +718,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgInstallPkgAtRoot "$dir_installer" "$app_name_partial"
+            dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -738,7 +738,7 @@ app_num=141
 appnum_toinclude=$appnum_toinclude_Messenger
 app_hbname="messenger"
 dir_installer="Messenger""a64x64"
-app_name_partial="Messenger"
+app_shortname="Messenger"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -759,7 +759,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -779,7 +779,7 @@ app_num=151
 appnum_toinclude=$appnum_toinclude_AcrobatReader
 app_hbname="adobe-acrobat-reader"
 dir_installer="AcrobatReader""a64x64"
-app_name_partial="AcroRdr"
+app_shortname="AcroRdr"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -798,7 +798,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgInstallPkgAtRoot "$dir_installer" "$app_name_partial"
+            dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -818,7 +818,7 @@ app_num=161
 appnum_toinclude=$appnum_toinclude_Dropbox
 app_hbname="dropbox"
 dir_installer="Dropbox""$archSuffix"
-app_name_partial="Dropbox"
+app_shortname="Dropbox"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -839,7 +839,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgInstallApp "$dir_installer" "$app_name_partial"
+            dmgInstallApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1011,7 +1011,7 @@ app_num=175
 appnum_toinclude=$appnum_toinclude_WeChat
 app_hbname="wechat"
 dir_installer="WeChat""a64x64"
-app_name_partial="WeChat"
+app_shortname="WeChat"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1030,7 +1030,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1050,7 +1050,7 @@ app_num=181
 appnum_toinclude=$appnum_toinclude_TeamViewer
 app_hbname="teamviewer"
 dir_installer="TeamViewerLatest""a64x64"
-app_name_partial="TeamViewer"
+app_shortname="TeamViewer"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1069,7 +1069,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgInstallPkgAtAppcontres "$dir_installer" "$app_name_partial"
+            dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1090,7 +1090,7 @@ appnum_toinclude=$appnum_toinclude_TeamViewer
 app_hbname="teamviewer"
 url_appspecific="$url_teamviewerqs_13"
 dir_installer="TeamViewerQS13""x64"
-app_name_partial="TeamViewerQS"
+app_shortname="TeamViewerQS"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1105,7 +1105,7 @@ then
     if [[ $mode_onoffdown != "3" ]]
     then
         # Offline
-        dmgCopyApp "$dir_installer" "$app_name_partial"
+        dmgCopyApp "$dir_installer" "$app_shortname"
     fi
 
     echo " "
@@ -1189,7 +1189,7 @@ app_num=182
 appnum_toinclude=$appnum_toinclude_Keka
 app_hbname="keka"
 dir_installer="Keka""a64x64"
-app_name_partial="Keka"
+app_shortname="Keka"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1208,7 +1208,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1228,7 +1228,7 @@ app_num=183
 appnum_toinclude=$appnum_toinclude_VLC
 app_hbname="vlc"
 dir_installer="VLC""$archSuffix"
-app_name_partial="VLC"
+app_shortname="VLC"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1247,7 +1247,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1268,7 +1268,7 @@ appnum_toinclude=$appnum_toinclude_Java8
 app_hbname="java"
 url_appspecific="$url_javajre_8_x64"
 dir_installer="Java""x64"
-app_name_partial="Java"
+app_shortname="Java"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1283,7 +1283,7 @@ then
     if [[ $mode_onoffdown != "3" ]]
     then
         # Offline
-        dmgInstallPkgAtAppcontres "$dir_installer" "$app_name_partial"
+        dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
     fi
 
     echo " "
@@ -1302,7 +1302,7 @@ app_num=185
 appnum_toinclude=$appnum_toinclude_OpenVPN
 app_hbname="openvpn-connect"
 dir_installer="OpenVPN""a64x64"
-app_name_partial="OpenVPN"
+app_shortname="OpenVPN"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1322,7 +1322,7 @@ then
         then
             # Offline
             ########## START OF CODE FOR OFFLINE INSTALL ##################################################
-            # Almost same as dmgInstallPkgAtRoot "$dir_installer" "$app_name_partial"
+            # Almost same as dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
 
             echo "Installing $1 ..."
 
@@ -1333,7 +1333,7 @@ then
             hdiutil attach -quiet -nobrowse -noverify "$dir_installer/$filename_dmg"
 
             # Get volume name of mounted dmg
-            name_vol_final="$(ls /Volumes | egrep $app_name_partial)"
+            name_vol_final="$(ls /Volumes | egrep $app_shortname)"
 
             # Here is where it gets different, as pkg file is located inside some subdirectory
             # Almost same as pkgInstall "$dir_installer"
@@ -1385,7 +1385,7 @@ app_num=185
 appnum_toinclude=$appnum_toinclude_WireGuard
 app_hbname="wireguard-tools"
 dir_installer="WireGuard""a64x64"
-app_name_partial="WireGuard"
+app_shortname="WireGuard"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1404,7 +1404,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1424,7 +1424,7 @@ app_num=186
 appnum_toinclude=$appnum_toinclude_Firefox
 app_hbname="firefox"
 dir_installer="Firefox""a64x64"
-app_name_partial="Firefox"
+app_shortname="Firefox"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1443,7 +1443,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1463,7 +1463,7 @@ app_num=187
 appnum_toinclude=$appnum_toinclude_Thunderbird
 app_hbname="thunderbird"
 dir_installer="Thunderbird""a64x64"
-app_name_partial="Thunderbird"
+app_shortname="Thunderbird"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1482,7 +1482,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1502,7 +1502,7 @@ app_num=188
 appnum_toinclude=$appnum_toinclude_OBS
 app_hbname="obs"
 dir_installer="OBS""$archSuffix"
-app_name_partial="OBS"
+app_shortname="OBS"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1521,7 +1521,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
@@ -1541,7 +1541,7 @@ app_num=190
 appnum_toinclude=$appnum_toinclude_LibreOffice
 app_hbname="libreoffice"
 dir_installer="LibreOffice""$archSuffix"
-app_name_partial="LibreOffice"
+app_shortname="LibreOffice"
 # 
 # main Install/Download/Execute
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($appnum_toinclude -eq "1") ]]
@@ -1560,7 +1560,7 @@ then
         if [[ $mode_onoffdown != "3" ]]
         then
             # Offline
-            dmgCopyApp "$dir_installer" "$app_name_partial"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
