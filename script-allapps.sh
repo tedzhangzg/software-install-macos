@@ -799,8 +799,6 @@ then
     then
         # pkgmgr
         brew install --cask $app_hbname
-        # Rename
-        mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/Messenger_ver.dmg"
     else
         # download
         if [[ ! -d "$dir_installer" ]]
@@ -1061,6 +1059,8 @@ then
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
+            # rename
+            mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/WhatsApp-ver.zip"
         fi
         # install
         if [[ $mode_onoffdown != "3" ]]
