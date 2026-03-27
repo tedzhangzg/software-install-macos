@@ -52,7 +52,7 @@ case $macos_version in
         # 13
         # macOS 13
         dir_installer="Office16v16100""a64x64"
-        url=$url_microsoft_office_16_v16100
+        url=$url_microsoft_office_16_v16101
         disable_onedrive_update=1
         ;;
     12)
