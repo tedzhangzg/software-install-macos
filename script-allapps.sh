@@ -828,7 +828,7 @@ fi
 # 
 # param
 app_num=151
-app_shortname="AcrobatReader"
+app_shortname="AcroRdr"
 app_toinclude=$app_toinclude_AcrobatReader
 # 
 # main
