@@ -44,63 +44,63 @@ case $macos_version in
         # 26|15|14
         # macOS 26,15,14
         app_hbname="microsoft-office"
-        dir_installer="Office2024""a64x64"
+        dir_installer="Office2024""_""$arch_name"
         url=$(getURLFromBrew "$app_hbname")
         disable_onedrive_update=0
         ;;
     13)
         # 13
         # macOS 13
-        dir_installer="Office16v16100""a64x64"
+        dir_installer="Office16v16101""_""$arch_name"
         url=$url_microsoft_office_16_v16101
         disable_onedrive_update=1
         ;;
     12)
         # 12
         # macOS 12
-        dir_installer="Office16v1689""a64x64"
+        dir_installer="Office16v1689""_""$arch_name"
         url=$url_microsoft_office_16_v1689
         disable_onedrive_update=1
         ;;
     11)
         # 11
         # macOS 11
-        dir_installer="Office16v1677""a64x64"
+        dir_installer="Office16v1677""_""$arch_name"
         url=$url_microsoft_office_16_v1677
         disable_onedrive_update=1
         ;;
     10)
         # 10
         # macOS 10.15
-        dir_installer="Office16v1666""a64x64"
+        dir_installer="Office16v1666""_""$arch_name"
         url=$url_microsoft_office_16_v1666
         disable_onedrive_update=0
         ;;
     9)
         # 9
         # macOS 10.13
-        dir_installer="Office2019v1643""x64"
+        dir_installer="Office2019v1643""_""x64"
         url=$url_microsoft_office_2019_v1643
         disable_onedrive_update=0
         ;;
     8)
         # 8
         # OS X 10.11
-        dir_installer="Office2016v1616""x64"
+        dir_installer="Office2016v1616""_""x64"
         url=$url_microsoft_office_2016_v1616
         disable_onedrive_update=0
         ;;
     7)
         # 7
         # Mac OS X 10.7
-        dir_installer="Office2011""x86"
+        dir_installer="Office2011""_""x86"
         url=$url_microsoft_office_2011
         disable_onedrive_update=0
         ;;
     6)
         # 6
         # Mac OS X 10.6 and earlier
-        dir_installer="Office2011""x86"
+        dir_installer="Office2011""_""x86"
         url=$url_microsoft_office_2011
         disable_onedrive_update=0
         ;;
