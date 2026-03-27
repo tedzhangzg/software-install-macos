@@ -981,7 +981,7 @@ then
         # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            uncompressFileCopyApp "$dir_installer"
+            dmgCopyApp "$dir_installer" "$app_shortname"
         fi
     fi
 
