@@ -1408,58 +1408,47 @@ then
         # pkgmgr
         brew install --cask $app_hbname
     else
+        # download
         if [[ ! -d "$dir_installer" ]]
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
         fi
+        # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            # install
+            # dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
+            dmgInstallPkgAtAppcontres "$dir_installer" "$arch_name"
+            # 
             ########## START OF CODE FOR OFFLINE INSTALL ##################################################
-            # Almost same as dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
-
-            echo "Installing $1 ..."
-
-            # Get dmg filename
-            filename_dmg="$(ls $dir_installer | egrep '\.dmg$')"
-
-            # Mount dmg
-            hdiutil attach -quiet -nobrowse -noverify "$dir_installer/$filename_dmg"
-
-            # Get volume name of mounted dmg
-            name_vol_final="$(ls /Volumes | egrep $app_shortname)"
-
-            # Here is where it gets different, as pkg file is located inside some subdirectory
-            # Almost same as pkgInstall "$dir_installer"
-
-            # Install
-            # pkgInstall "/Volumes/$name_vol_final"
-
-            # cd
-            pushd "/Volumes/$name_vol_final"
-
-            # Get name
-            if [[ $appInstallerArchitecture -eq 1 ]]
-            then
-                pkgName="$(ls | egrep '\.pkg$' | grep 'arm')"
-            else
-                pkgName="$(ls | egrep '\.pkg$' | grep 'x86')"
-            fi
-
-            # Install
-            sudo installer -pkg "$pkgName" -target /
-
-            # cd
-            popd
-
-            # End of Here is where it gets different, as pkg file is located inside some subdirectory
-
-            # Unmount dmg
-            hdiutil detach -quiet "/Volumes/$name_vol_final"
-
-            echo "... Done installing $1"
-
+            # # Almost same as dmgInstallPkgAtRoot "$dir_installer" "$app_shortname"
+            # echo "Installing $1 ..."
+            # # Get dmg filename
+            # filename_dmg="$(ls $dir_installer | egrep '\.dmg$')"
+            # # Mount dmg
+            # hdiutil attach -quiet -nobrowse -noverify "$dir_installer/$filename_dmg"
+            # # Get volume name of mounted dmg
+            # name_vol_final="$(ls /Volumes | egrep $app_shortname)"
+            # # Here is where it gets different, as pkg file is located inside some subdirectory
+            # # Almost same as pkgInstall "$dir_installer"
+            # # Install
+            # # pkgInstall "/Volumes/$name_vol_final"
+            # # cd
+            # pushd "/Volumes/$name_vol_final"
+            # # Get name
+            # if [[ $appInstallerArchitecture -eq 1 ]]
+            # then
+            #     pkgName="$(ls | egrep '\.pkg$' | grep 'arm')"
+            # else
+            #     pkgName="$(ls | egrep '\.pkg$' | grep 'x86')"
+            # fi
+            # # Install
+            # sudo installer -pkg "$pkgName" -target /
+            # # cd
+            # popd
+            # # Unmount dmg
+            # hdiutil detach -quiet "/Volumes/$name_vol_final"
+            # echo "... Done installing $1"
             ########## END OF CODE FOR OFFLINE INSTALL ##################################################
         fi
     fi
