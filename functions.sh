@@ -96,7 +96,10 @@ function meetMinOS() {
 function getURLFromBrew() {
 
     # print
-    echo $(brew info --cask --json=v2 $1 | jq -r '.casks[].url')
+    # using ruby
+    brew info --cask --json=v2 "$1" | ruby -rjson -e "puts JSON.parse(STDIN.read)['casks'][0]['url']"
+    # using jq which may not be installed
+    # brew info --cask --json=v2 "$1" | jq -r '.casks[].url'
 
 }
 
