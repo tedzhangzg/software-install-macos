@@ -1149,7 +1149,7 @@ then
         # install
         if [[ $mode_onoffdown != "3" ]]
         then
-            dmgInstallPkgAtAppcontres "$dir_installer" "$app_shortname"
+            pkgInstall "$dir_installer"
         fi
     fi
 
