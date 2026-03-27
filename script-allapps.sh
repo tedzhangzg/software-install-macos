@@ -550,6 +550,8 @@ then
         then
             url=$(getURLFromBrew "$app_hbname")
             downloadInstaller "$url" "$dir_installer"
+            # rename
+            mv "$dir_installer/$(ls $dir_installer)" "$dir_installer/VSCode-darwin-arm64.zip"
         fi
         # install
         if [[ $mode_onoffdown != "3" ]]
