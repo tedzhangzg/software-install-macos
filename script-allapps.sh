@@ -501,7 +501,7 @@ then
     if [[ $mode_onoffdown = "1" ]]
     then
         # pkgmgr
-        brew install --cask $app_hbname
+        brew install $app_hbname
     else
         # download
         if [[ ! -d "$dir_installer" ]]
