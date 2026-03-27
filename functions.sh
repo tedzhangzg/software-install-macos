@@ -96,7 +96,7 @@ function meetMinOS() {
 function getURLFromBrew() {
 
     # print
-    echo $(brew info --cask --json=v2 $app_hbname | jq -r '.casks[].url')
+    echo $(brew info --cask --json=v2 $1 | jq -r '.casks[].url')
 
 }
 
