@@ -64,6 +64,10 @@ array_ghlinks[9]="https://raw.githubusercontent.com/tedzhangzg/software-install-
 # 10
 array_filenames[10]="script-uninstall.sh"
 array_ghlinks[10]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-uninstall.sh"
+# 
+# 11
+array_filenames[11]="script-teamviewerqs.sh"
+array_ghlinks[11]="https://raw.githubusercontent.com/tedzhangzg/software-install-macos/main/script-teamviewerqs.sh"
 
 # loop over all key value pairs
 for i in "${!array_filenames[@]}"
