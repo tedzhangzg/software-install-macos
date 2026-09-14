@@ -40,69 +40,67 @@ fi
 
 # Set according to $macos_version
 case $macos_version in
-    26|15|14)
+    27|26|15)
         # 26|15|14
         # macOS 26,15,14
         app_hbname="microsoft-office"
         dir_installer="Office2024""_""$arch_name"
         url=$(getURLFromBrew "$app_hbname")
-        disable_onedrive_update=0
         ;;
+    14)
+        # 14
+        # macOS 14
+        dir_installer="Office16v16112""_""$arch_name"
+        url=$url_microsoft_office_16_v16112
+        ;;
+
     13)
         # 13
         # macOS 13
         dir_installer="Office16v16101""_""$arch_name"
         url=$url_microsoft_office_16_v16101
-        disable_onedrive_update=1
         ;;
     12)
         # 12
         # macOS 12
         dir_installer="Office16v1689""_""$arch_name"
         url=$url_microsoft_office_16_v1689
-        disable_onedrive_update=1
         ;;
     11)
         # 11
         # macOS 11
         dir_installer="Office16v1677""_""$arch_name"
         url=$url_microsoft_office_16_v1677
-        disable_onedrive_update=1
         ;;
     10)
         # 10
         # macOS 10.15
         dir_installer="Office16v1666""_""$arch_name"
         url=$url_microsoft_office_16_v1666
-        disable_onedrive_update=0
         ;;
     9)
         # 9
         # macOS 10.13
         dir_installer="Office2019v1643""_""x64"
         url=$url_microsoft_office_2019_v1643
-        disable_onedrive_update=0
         ;;
     8)
         # 8
         # OS X 10.11
         dir_installer="Office2016v1616""_""x64"
         url=$url_microsoft_office_2016_v1616
-        disable_onedrive_update=0
         ;;
     7)
         # 7
         # Mac OS X 10.7
         dir_installer="Office2011""_""x86"
         url=$url_microsoft_office_2011
-        disable_onedrive_update=0
         ;;
     6)
         # 6
         # Mac OS X 10.6 and earlier
         dir_installer="Office2011""_""x86"
         url=$url_microsoft_office_2011
-        disable_onedrive_update=0
         ;;
     *)
         # Default
@@ -114,8 +112,8 @@ esac
 
 
 # install office
-if [[ ("14" -le $macos_version) && ($macos_version -le "26") ]]
-# macOS 26,15-14
+if [[ ("15" -le $macos_version) && ($macos_version -le "27") ]]
+# macOS 27-26,15
 then
     # Do case
     if [[ $mode_onoffdown = "1" ]]
@@ -134,8 +132,8 @@ then
         fi
     fi
     # Done case
-elif [[ ("6" -le $macos_version) && ($macos_version -le "13") ]]
-# macOS 13-11,10.15-10.7
+elif [[ ("6" -le $macos_version) && ($macos_version -le "14") ]]
+# macOS 14-11,10.15-10.7
 then
     # Do case
     if [[ ! -d "$dir_installer" ]]
@@ -153,19 +151,6 @@ else
     echo "Manually download and install Microsoft Office ..."
     read -p "Press Enter to continue...: "
     # Done case Default
-fi
-
-# disable OneDrive update
-if [[ ($disable_onedrive_update -eq "1") ]]
-then
-    # remove launchctl
-    sudo launchctl remove com.microsoft.OneDriveStandaloneUpdater
-    sudo launchctl remove com.microsoft.OneDriveStandaloneUpdaterDaemon
-    sudo launchctl remove com.microsoft.OneDriveUpdaterDaemon
-    # move plist
-    sudo mv /Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist /Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist.bak
-    sudo mv /Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist /Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist.bak
-    sudo mv /Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist /Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist.bak
 fi
 
 echo " "

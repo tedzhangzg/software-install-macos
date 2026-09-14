@@ -87,7 +87,7 @@ app_toinclude_OfficeVLS=1
 ##################################################
 # Do not touch
 ##################################################
-latest_macos_version=26
+latest_macos_version=27
 
 
 # echo " "

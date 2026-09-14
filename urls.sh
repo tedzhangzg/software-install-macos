@@ -71,6 +71,10 @@ url_microsoft_office="https://go.microsoft.com/fwlink/p/?linkid=525133"
 # for Office with Teams
 # url_microsoft_office="https://go.microsoft.com/fwlink/p/?linkid=2009112"
 # 
+# last version for macOS 14
+# v2024
+url_microsoft_office_16_v16112="https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.112.26090911_Installer.pkg"
+# 
 # last version for macOS 13
 # v2024
 url_microsoft_office_16_v16101="https://officecdn.microsoft.com/pr/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_365_and_Office_16.101.25091314_Installer.pkg"
