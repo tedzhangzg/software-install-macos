@@ -183,7 +183,7 @@ echo "174 WhatsApp"
 echo "175 WeChat"
 ##################################################
 echo "---------- Utilities Apps ----------"
-echo "181 TeamViewer"
+echo "181 Remote Support - TeamViewer RustDesk"
 echo "182 Archiving - RAR Keka"
 echo "183 VLC"
 echo "184 Java 8"
@@ -1162,32 +1162,74 @@ fi
 # 
 # done
 
-# TeamViewerQS
+# # TeamViewerQS
+# # 
+# # param
+# app_num=181
+# app_shortname="TeamViewerQS"
+# app_toinclude=$app_toinclude_TeamViewer
+# # 
+# # main
+# if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
+# then
+
+#     # param
+#     app_hbname="teamviewer"
+#     url_appspecific="$url_teamviewerqs_13"
+#     dir_installer="$app_shortname""_""x64"
+
+#     # download
+#     if [[ ! -d "$dir_installer" ]]
+#     then
+#         url=$url_appspecific
+#         downloadInstaller "$url" "$dir_installer"
+#     fi
+#     # install
+#     if [[ $mode_onoffdown != "3" ]]
+#     then
+#         dmgCopyApp "$dir_installer" "$app_shortname"
+#     fi
+
+#     # done
+#     echo " "
+#     # clear param
+#     # unset app_toinclude
+
+# fi
+# # 
+# # done
+
+# TeamViewerLatest
 # 
 # param
 app_num=181
-app_shortname="TeamViewerQS"
-app_toinclude=$app_toinclude_TeamViewer
+app_shortname="RustDesk"
+app_toinclude=$app_toinclude_RustDesk
 # 
 # main
 if [[ ($appnum_toinstall_from -le $app_num) && ($app_num -le $appnum_toinstall_to) && ($app_toinclude -eq "1") ]]
 then
 
     # param
-    app_hbname="teamviewer"
-    url_appspecific="$url_teamviewerqs_13"
-    dir_installer="$app_shortname""_""x64"
+    app_hbname="rustdesk"
+    dir_installer="$app_shortname""_""$arch_name"
 
-    # download
-    if [[ ! -d "$dir_installer" ]]
+    if [[ $mode_onoffdown = "1" ]]
     then
-        url=$url_appspecific
-        downloadInstaller "$url" "$dir_installer"
-    fi
-    # install
-    if [[ $mode_onoffdown != "3" ]]
-    then
-        dmgCopyApp "$dir_installer" "$app_shortname"
+        # pkgmgr
+        brew install --cask $app_hbname
+    else
+        # download
+        if [[ ! -d "$dir_installer" ]]
+        then
+            url=$(getURLFromBrew "$app_hbname")
+            downloadInstaller "$url" "$dir_installer"
+        fi
+        # install
+        if [[ $mode_onoffdown != "3" ]]
+        then
+            pkgInstall "$dir_installer"
+        fi
     fi
 
     # done

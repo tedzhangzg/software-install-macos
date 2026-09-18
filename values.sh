@@ -68,6 +68,7 @@ app_toinclude_WhatsApp=1
 app_toinclude_WeChat=0
 # 
 app_toinclude_TeamViewer=1
+app_toinclude_RustDesk=1
 app_toinclude_Keka=1
 app_toinclude_VLC=1
 app_toinclude_Java=0
