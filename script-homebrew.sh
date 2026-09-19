@@ -28,8 +28,28 @@ echo "Script - Install Homebrew"
 echo "================================================================================"
 echo " "
 
+# install xcode-select
+# 
+# xcode-select --install 2>/dev/null
+# 
+# echo "Waiting for Xcode Command Line Tools to install..."
+# until xcode-select -p &>/dev/null; do
+#     sleep 5
+# done
+# 
+# echo "Installation complete."
+
 # homebrew one-liner script
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# 
+if [[ $appInstallerArchitecture -eq "1" ]]
+then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+elif [[ $appInstallerArchitecture -eq "2" ]]
+then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/e078684c4a86a34bc1239e1a0ddcb86d7b9c787b^/install.sh)"
+else
+    echo "Invalid architecture"
+fi
 
 # For homebrew on Apple Silicon
 # Note: ignore for Intel Mac
